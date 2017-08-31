@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>gallery</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="add"></ion-icon>
+    </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <!-- <ion-slides class="image-slider" loop="true" slidesPerView="2">
+        <ion-slide *ngFor="let img of images">
+          <img src="img/logo.png" class="thumb-img" imageViewer/>
+        </ion-slide>
+      </ion-slides> -->
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <a (click)="pic()"><img src="img/logo.png"></a>
+    </ion-thumbnail>
+    <h2>ร้านค้า</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <a (click)="pic()"><img src="img/logo.png"></a>
+    </ion-thumbnail>
+    <h2>สถานที่</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <a (click)="pic()"><img src="img/logo.png"></a>
+    </ion-thumbnail>
+    <h2>ของกิน</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <a (click)="pic()"><img src="img/logo.png"></a>
+    </ion-thumbnail>
+    <h2>บรรยากาศตลาดนัด</h2>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <a (click)="pic()"><img src="img/logo.png"></a>
+    </ion-thumbnail>
+    <h2>กิจกรรม</h2>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header align="center">
+    <ion-navbar>
+        <ion-title>profile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding align="center">
+
+    <div class="card" align="center" style="padding:1px;" *ngFor="let item of items">
+        <ion-card-header style="padding:1px;">
+            <div align="right">
+                <button ion-button small>
+          <ion-icon name="create" (click)="editPro()"></ion-icon>แก้ไขข้อมูล
+        </button>
+            </div>
+            <div align="center">
+                <img src="img/user.jpg">
+            </div>
+            <h1><b>{{ item.name }}</b></h1>
+            <p>สมาชิก : {{ item.type }} </p>
+        </ion-card-header>
+        <ion-card-content align="left" style="padding:1px;">
+            <ion-row>
+                <ion-col col-5>
+                    <b>
+          <p>เลขที่ประชาชน</p><br>
+          <p>วัน/เดือน/ปี เกิด</p><br>
+          <p>ที่อยู่</p><br>
+          <p>หมายเลขโทรศัพท์</p><br>
+          <p>อีเมล</p>
+        </b>
+                </ion-col>
+                <ion-col col-7>
+                    <p>{{ item.id_card }}</p><br>
+                    <p>{{ item.hbd }}</p><br>
+                    <p>{{ item.address }}</p><br>
+                    <p>{{ item.tel }}</p><br>
+                    <p>{{ item.email }}</p><br>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </div>
+
+
+
+</ion-content>

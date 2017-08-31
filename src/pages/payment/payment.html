@@ -1,0 +1,133 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content align="center">
+  <div hidden>
+    <ion-card align="center">
+      <ion-card-header>
+        <h1><b>คุณมีโชค มีชัย</b></h1>
+      </ion-card-header>
+      <ion-card-content>
+        จองพื้นที่จำหน่ายสินค้า วันที่ 2 กัยยายน 2017<br> มียอดค้างชำระจำนวน
+        <br>
+        <h1><b>1,000.00</b></h1>
+        <h2>บาท</h2><br>
+        <h3>** กรุณาติดต่อชำระเงินก่อนวันที่ 1 กันยายน 2017 เวลา 23.59 น.</h3>
+        มิฉะนั้นจะถือว่าคุณสละสิทธิ์ในการจองพื้นที่ขายของ<br>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button block large>ชำระเงิน</button>
+    <button ion-button color="danger" outline block large>ยกเลิกการจองพื้นที่</button>
+  </div>
+
+  <div hidden>
+    <ion-card align="center">
+      <ion-card-header>
+        <h1><b>คุณมีโชค มีชัย</b></h1>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="ios-basket-outline"></ion-icon><br> ไม่พบยอดค้างชำระ!
+        <br>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div padding>
+    <h3><b>เลือกช่องทางการชำระเงิน</b></h3>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="bank">
+        <b>ธนาคาร</b>
+      </ion-segment-button>
+      <ion-segment-button value="credit">
+        <b>บัตรเครดิต</b>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'bank'">
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/bank/ktb.jpg" alt="Krungthai">
+        </ion-label>
+        <ion-label>100-231-445-1</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/bank/scb.jpg" alt="Thaipanich">
+        </ion-label>
+        <ion-label>100-231-445-2</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/bank/kb.jpg" alt="Kasikon">
+        </ion-label>
+        <ion-label>100-231-445-3</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/bank/krb.jpg" alt="Krungsri">
+        </ion-label>
+        <ion-label>100-231-445-4</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/bank/bb.jpg" alt="Krungtep">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'credit'">
+
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/credit/vs.jpg" alt="Krungtep">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/credit/mc.jpg" alt="Krungtep" width="100">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/credit/pp.jpg" alt="Krungtep">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/credit/up.jpg" alt="Krungtep">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-radio name="pay" value="pay"></ion-radio>
+        <ion-label>
+          <img src="img/credit/wl.jpg" alt="Krungtep">
+        </ion-label>
+        <ion-label>100-231-445-5</ion-label>
+      </ion-item>
+
+    </ion-list>
+    <ion-input type="file" value=""></ion-input>
+  </div>
+</ion-content>

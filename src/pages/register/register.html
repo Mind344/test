@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="form" align="center">
+    <form action="" method="post" [formGroup]="form" (ngSubmit)="saveEntry()">
+      <ion-item align="center">
+        <a style="height:100px;width:100px;" (click)="proPic()">
+        <img src="img/logo.png" width="80" height="80">
+        </a > 
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>หมายเลขบัตรประชาชน</ion-label>
+        <ion-input formControlName="id_card" [(ngModel)]="id_card"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>ชื่อ - สกุล</ion-label>
+        <ion-input formControlName="name" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>หมายเลขโทรศัพท์</ion-label>
+        <ion-input formControlName="tel" [(ngModel)]="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>E-mail</ion-label>
+        <ion-input formControlName="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Password</ion-label>
+        <ion-input type="password" formControlName="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <p style="color:red;">** กรุณากรอกข้อมูลให้ครบถ้วน **</p>
+      <button ion-button block [disabled]="!form.valid">สมัครสมาชิก</button>
+    </form>
+
+  </div>
+</ion-content>

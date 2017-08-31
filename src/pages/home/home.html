@@ -1,14 +1,88 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content align="center" class="home" style="background-image: url('img/bg-gold2.jpg');">
+  <div class="head">
+    <img src="img/logo2.png" style="width:50px;height:auto;margin-top:10px;">
+    <h1><b>มีโชคพลาซ่า</b></h1>
+  </div>
+  <ion-grid>
+    <ion-row color="bg">
+      <ion-col>
+        <ion-slides autoplay="3000" loop="true" speed="500">
+          <ion-slide>
+            <img src="img/review1/IMG_7480.JPG">
+          </ion-slide>
+          <ion-slide>
+            <img src="img/review1/IMG_7481.JPG">
+          </ion-slide>
+          <ion-slide>
+            <img src="img/review1/IMG_7488.JPG">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <marquee bgcolor="black" direction="lefe" scrollamount="5" width="100%">
+          มีโชคพลาซ่าศูนย์การค้าที่อำนวยความสะดวกและตอบโจทย์ทั้งผู้ซื้อและผู้ขาย ด้วยการบริหารโดยทีมงานคุณภาพ 
+          ตลาดนัดวันจันทร์-อังคาร พบกับสินค้ามากมายที่มีมาให้เลือกช็อปเลือกชิมในราคากันเอง
+        </marquee>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)="profilefn()" class="test">
+          <ion-icon name="person"></ion-icon><br>
+          <p>ข้อมูลส่วนตัว</p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button (click)="aboutfn()" class="test"> 
+          <ion-icon name="ribbon"></ion-icon><br>
+          <p>เกี่ยวกับ</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)="mapfn()" class="test">
+          <ion-icon name="pin"></ion-icon><br>
+          <p>แผนที่</p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button (click)="galleryfn()" class="test">
+          <ion-icon name="images"></ion-icon><br>
+          <p>รูปภาพ</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)="rentalfn()" class="test">
+          <ion-icon name="pricetag"></ion-icon><br>
+          <p>จองพื้นที่</p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button (click)="paymentfn()" class="test">
+         <ion-icon name="cash"></ion-icon><br>
+         <p>ชำระเงิน</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button block large (click)="loginfn()" style="background: rgba(0, 0, 0, 0.30);"> 
+        <h1><b>เข้าสู่ระบบ</b></h1>
+      </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button block large (click)="logoutfn()" style="background: rgba(0, 0, 0, 0.30);">
+        <h1><b>ออกจากระบบ</b></h1>
+      </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
 </ion-content>

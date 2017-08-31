@@ -1,0 +1,14 @@
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="img/logo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+   -->
+<ion-tabs color="bg">
+  <ion-tab [root]="tab1Root" tabTitle="หน้าแรก" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="เกียวกับ" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="การแจ้งเตือน" tabIcon="notifications"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="ติดต่อสอบถาม" tabIcon="contacts"></ion-tab>
+</ion-tabs>

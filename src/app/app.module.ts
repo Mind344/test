@@ -1,25 +1,60 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
+
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ProfilePage } from '../pages/profile/profile';
+import { GalleryPage} from '../pages/gallery/gallery';
+import { MapPage } from '../pages/map/map';
+import { RentalPage } from '../pages/rental/rental';
+import { PaymentPage } from '../pages/payment/payment';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    ProfilePage,
+    GalleryPage,
+    MapPage,
+    RentalPage,
+    PaymentPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
+    BrowserModule,HttpModule,
+    IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+    ProfilePage,
+    GalleryPage,
+    MapPage,
+    RentalPage,
+    PaymentPage,
+    LoginPage,
+    RegisterPage
+
   ],
   providers: [
     StatusBar,

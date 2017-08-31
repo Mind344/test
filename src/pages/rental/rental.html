@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>rental</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content align="center">
+    <ion-item>
+        <ion-label stacked>วันที่ต้องการจอง</ion-label>
+        <ion-datetime displayFormat="DD MMM YYYY " [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            {{ item }}
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <ion-segment [(ngModel)]="zone">
+            <ion-segment-button value="food">
+                อาหาร
+            </ion-segment-button>
+            <ion-segment-button value="fruit">
+                ผลไม้
+            </ion-segment-button>
+            <ion-segment-button value="gif">
+                กิ๊ฟชอป
+            </ion-segment-button>
+            <ion-segment-button value="clothes">
+                เสื้อผ้า
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+
+
+    <!-- All List -->
+    <ion-list>
+        <ion-item>
+            <ion-label>A001</ion-label>
+            <ion-label>อาหาร</ion-label>
+            <ion-label>จองแล้ว</ion-label>
+            <ion-checkbox disabled="true" checked="true"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Boo1</ion-label>
+            <ion-label>อาหาร</ion-label>
+            <ion-label>ว่าง</ion-label>
+            <ion-checkbox></ion-checkbox>
+        </ion-item>
+    </ion-list>
+    <!-- /All List -->
+
+
+
+    <!-- Select List -->
+    <div [ngSwitch]="zone">
+        <ion-list *ngSwitchCase="'food'">
+            <ion-item>
+                <ion-label>A001</ion-label>
+                <ion-label>อาหาร</ion-label>
+                <ion-label>จองแล้ว</ion-label>
+                <ion-checkbox disabled="true" checked="true"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'fruit'">
+            <ion-item>
+                <ion-label>Boo1</ion-label>
+                <ion-label>ผลไม้</ion-label>
+                <ion-label>ว่าง</ion-label>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngSwitchCase="'gif'">
+            <ion-item>
+                <ion-label>C001</ion-label>
+                <ion-label>กิ๊ฟชอป</ion-label>
+                <ion-label>ว่าง</ion-label>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'clothes'">
+            <ion-item>
+                <ion-label>D001</ion-label>
+                <ion-label>เสื้อผ้า</ion-label>
+                <ion-label>ว่าง</ion-label>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </div>
+    <!-- /Select List -->
+    <!-- <button ion-button large block (click)="rentalList()">ดำเนินการต่อไป >> </button> -->
+    <button ion-button large block (click)="rentalList()">ดำเนินการต่อไป >> </button>
+
+
+
+</ion-content>
